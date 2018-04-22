@@ -7,6 +7,6 @@ module.exports = function init(env) {
 
     // env arguments
     nconf.env();
-    nconf.file('custom-env', path.join(process.cwd(), 'server', 'config', env+'.json'));
+    nconf.file('custom-env', path.join(__dirname, env+'.json'));
     return nconf;
 }
