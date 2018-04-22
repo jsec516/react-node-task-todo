@@ -1,0 +1,12 @@
+{
+    "url": "http://localhost:2368",
+    "database": {
+        "client": "mongodb",
+        "connection":  "mongodb://localhost:27017/tasks",
+        "debug": false
+    },
+    "server": {
+        "port": 8080,
+        "host": "localhost"
+    }
+}
