@@ -20,7 +20,6 @@ export class MongoConnector implements DBDriver {
         if(criteria && criteria.term) {
             params= { $text: { $search: "\""+criteria.term+"\"" } }
         }
-        console.log(params);
         const documents = this.db.collection(collection);
         return documents.find(params).toArray();
     }

@@ -12,7 +12,7 @@ class FakeTaskService {
     }
 
     find(criteria) {
-        return Promise.resolve([]);
+        return Promise.resolve([{startTime: 0}]);
     }
 }
 
@@ -21,9 +21,9 @@ describe('TaskController', function() {
         taskController = new Task(new FakeTaskService());
     })
     describe('list', function() {
-        it('should get all task', (done) => {
-            taskController.list({}, {json: (result) => {
-                assert.ok(result.success, 'result is successful');
+        it('should get all the task', (done) => {
+            taskController.list({query: null}, {json: (result) => {
+                assert.ok(result, 'result is successful');
                 done();
             }});
         })

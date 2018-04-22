@@ -15,7 +15,8 @@ export class Task {
         return this.taskService.save({
             startTime: req.body.startTime,
             endTime: req.body.endTime,
-            description: req.body.description
+            description: req.body.description,
+            duration: req.body.duration
         }).then(saved => {
             return res.json({success: true, message: 'saved successfully', data: saved});
         });
