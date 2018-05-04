@@ -19,6 +19,8 @@ prerequisite
 - port `8080` and `3000` is free
 - please make sure NODE_ENV is `development` as we have only one configuration file for server
 
+NOTE: filtering feature in client side requires exact word. for an example in seed data that I provided in script, if you provide `server-side` it will retrieve 2 records contains that term.
+
 how to run server
 =================
 - go to the directory `/server`
